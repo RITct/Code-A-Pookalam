@@ -1,0 +1,244 @@
+<html><head><canvas id="mcanvas" width="700" height="700" style="border:1px solid #000000;">
+<script>
+var mycanvas=document.getElementById("mcanvas");
+var con=mycanvas.getContext("2d");
+
+
+con.font = "30px Comic Sans MS";
+con.fillStyle="red";
+con.fillText("Happy",10,50);
+con.fillText("Onam",600,50);
+
+//drawcircle() pinne drawmultiplecirc  inte  definition ettavum thaze ond........vijaicv
+//deepam
+
+  drawcircle(50,620,30,0,Math.PI, "#901A01", "black", 2);
+  con.closePath();
+  //flames
+      con.beginPath();
+      con.arc(55,610,15,Math.PI/2,3*Math.PI/2);
+      con.arc(50,610,15,3*Math.PI/2,Math.PI/2);
+      con.fillStyle="yellow";
+      con.strokeStyle="orange";
+      con.lineWidth="4";
+      con.fill();
+      con.stroke();
+      con.closePath();
+  //flames
+
+//deepam
+
+//deepam
+
+  drawcircle(650,620,30,0,Math.PI, "#901A01  ", "black", 2);
+  drawcircle(650,620,6,0,2*Math.PI, "red", "black", 2);
+  //flames
+      con.beginPath();
+      con.arc(655,610,15,Math.PI/2,3*Math.PI/2);
+      con.arc(650,610,15,3*Math.PI/2,Math.PI/2);
+      con.fillStyle="yellow";
+      con.strokeStyle="orange";
+      con.lineWidth="4";
+      con.fill();
+      con.stroke();
+      con.closePath();
+  //flames
+
+//deepam
+
+
+drawcircle(350,350,329,0,2*Math.PI,"white", "black",4);
+//outerring-design
+drawmultiplecirc(300,Math.PI/20,"red","black",25,45);
+drawmultiplecirc(300,Math.PI/20, "green","white",12, 45);
+//outerring-design
+
+
+drawcircle(350,350,300,0,2*Math.PI,"yellow", "blue",9);
+
+
+//petals
+//   lines
+for(i=0;i<60;i++){  
+con.beginPath();
+con.lineWidth=4;
+con.strokeStyle="#900C3F";
+con.moveTo(350,350);
+con.lineTo(350+200*Math.cos(i*Math.PI/30),350+200*Math.sin(i*Math.PI/30));
+con.stroke();
+con.closePath(); 
+}
+//lines
+
+
+drawcircle(350,350,180,0,2*Math.PI,"#FF5733", "black",2);
+
+
+for(i=1;i<7;i++){  
+con.beginPath();
+con.fillStyle="#900C3F";
+con.strokeStyle="#900C3F";
+con.moveTo(350,350);
+con.arc(350+180*Math.cos(Math.PI/6+i*Math.PI/3),350+180*Math.sin(Math.PI/6+i*Math.PI/3),180,5*Math.PI/6+i*Math.PI/3,9*Math.PI/6+i*Math.PI/3);
+con.stroke();
+con.fill();
+con.closePath(); 
+}
+
+
+for(i=1;i<7;i++){  
+    
+con.beginPath();
+con.fillStyle="white";
+con.strokeStyle="white";
+con.moveTo(350,350);
+con.arc(350+300*Math.cos(i*Math.PI/3),350+300*Math.sin(i*Math.PI/3),300,2*Math.PI/3+i*Math.PI/3,4*Math.PI/3+i*Math.PI/3);
+con.stroke();
+con.fill();
+con.closePath();
+  
+  
+con.beginPath();
+con.fillStyle="green";
+con.strokeStyle="green";
+con.moveTo(350,350);
+con.arc(350+180*Math.cos(i*Math.PI/3),350+180*Math.sin(i*Math.PI/3),180,2*Math.PI/3+i*Math.PI/3,4*Math.PI/3+i*Math.PI/3);
+con.stroke();
+con.fill();
+con.closePath();  
+
+}
+//petals
+
+
+
+//designs
+for(i=0;i<15;i++){
+  con.beginPath();
+  con.fillStyle="red";
+  con.strokeStyle="black";
+  con.arc(350+250*Math.cos(Math.PI/3+i*Math.PI/6),350+250*Math.sin(Math.PI/3+i*Math.PI/6),5,0,2*Math.PI);
+  con.closePath();
+  con.fill();
+  con.stroke();
+}
+
+drawmultiplecirc(250,Math.PI/6,"blue", "red", 8, 15);
+drawmultiplecirc(290,Math.PI/24,"blue", "red", 5,50);
+
+
+for(i=0;i<15;i++){
+  con.beginPath();
+  con.fillStyle="red";
+  con.strokeStyle="black";
+  con.arc(350+250*Math.cos(Math.PI/6+i*Math.PI/3),350+250*Math.sin(Math.PI/6+i*Math.PI/3),9,0,2*Math.PI);
+  con.closePath();
+  con.fill();
+  con.stroke();
+}
+
+for(i=0;i<15;i++){
+  con.beginPath();
+  con.fillStyle="yellow";
+  con.strokeStyle="red";
+  con.arc(350+250*Math.cos(Math.PI/6+i*Math.PI/3),350+250*Math.sin(Math.PI/6+i*Math.PI/3),3,0,2*Math.PI);
+  con.closePath();
+  con.fill();
+  con.stroke();
+}
+
+
+for(i=0;i<15;i++){
+  con.beginPath();
+  con.fillStyle="yellow";
+  con.strokeStyle="red";
+  con.arc(350+150*Math.cos(Math.PI/6+i*Math.PI/3),350+150*Math.sin(Math.PI/6+i*Math.PI/3),3,0,2*Math.PI);
+  con.closePath();
+  con.fill();
+  con.stroke();
+}
+
+
+
+//designs
+
+
+
+
+//core
+
+drawcircle(350,350,115,0,2*Math.PI,"yellow","black",6);
+for(i=1;i<25;i++){
+  con.beginPath();
+  con.lineWidth=2;
+  con.fillStyle="red";
+  con.strokeStyle="white";
+  var sangle=3*Math.PI/2;
+  con.arc(350+100*Math.cos(i*Math.PI/12),350+100*Math.sin(i*Math.PI/12),15,0,2*Math.PI);
+  con.closePath();
+  con.fill();
+  con.stroke();
+}
+
+drawcircle(350,350,100,0,2*Math.PI,"yellow","black",6);
+
+for(i=0;i<10;i++){
+con.beginPath();
+con.lineWidth=6;
+con.fillStyle="red";
+con.arc(350+100*Math.cos(i*Math.PI/3),350+100*Math.sin(i*Math.PI/3),100,2*Math.PI/3+i*Math.PI/3,4*Math.PI/3+i*Math.PI/3);
+con.fill();
+con.closePath();
+}
+
+
+for(i=0;i<10;i++){
+con.beginPath();
+con.lineWidth=6;
+con.strokeStyle="black";
+con.arc(350+50*Math.cos(i*Math.PI/3),350+50*Math.sin(i*Math.PI/3),100,2*Math.PI/3+i*Math.PI/3,4*Math.PI/3+i*Math.PI/3);
+con.stroke();
+con.fillStyle="blue";
+con.fill();
+con.closePath();
+}
+
+drawcircle(350,350,30,0,2*Math.PI,"#ffec0f","black",6);
+drawcircle(350,350,15,0,2*Math.PI,"#ff8000","black",6);
+drawcircle(350,350,5,0,2*Math.PI,"red","blck",6);
+drawcircle(350,350,2,0,2*Math.PI,"yellow","red",1);
+
+
+drawmultiplecirc(42,Math.PI/6,"white", "black", 5,15);
+drawmultiplecirc(25,Math.PI/3,"red", "black", 3,6);
+drawmultiplecirc(100,Math.PI/6,"blue", "white", 5,15);
+
+function drawmultiplecirc(r,ang,col1,col2,r2,rep){
+  for(i=0;i<rep;i++){
+  con.beginPath();
+  con.fillStyle=col1;
+  con.strokeStyle=col2;
+  con.arc(350+r*Math.cos(i*ang),350+r*Math.sin(i*ang),r2,0,2*Math.PI);
+  con.closePath();
+  con.fill();
+  con.stroke();
+  }
+}
+
+function drawcircle(x,y,r,sang,eang,color,scolor,thickness){
+con.beginPath();
+con.fillStyle=color;
+con.arc(x,y,r,sang,eang);
+con.strokeStyle=scolor;
+con.lineWidth=thickness;
+con.stroke();
+con.fill();
+con.closePath();
+}
+
+//core
+
+
+</script></head>
+
+</html>
